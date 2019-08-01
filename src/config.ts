@@ -2,12 +2,12 @@ let global : any = typeof window !== 'undefined' ? window : self;
 global.config = {
 	apiUrl:typeof window !== 'undefined' && window.location ? window.location.href.substr(0,window.location.href.lastIndexOf('/')+1)+'api/' : 'https://www.masariwallet.com/api/',
 	trustedDaemonsAddresses:[
-		'https://www.masariwallet.com:38084/'
+		'http://mcnwallet.oieieio.xyz:26080/'
 	],
 	phpRelay:typeof window !== 'undefined' ? true : false,
-	mainnetExplorerUrl: "https://msrchain.net/",
-	mainnetExplorerUrlHash: "https://msrchain.net/tx/{ID}",
-	mainnetExplorerUrlBlock: "https://msrchain.net/block/{ID}",
+	mainnetExplorerUrl: "https://explorer.mcn.green/",
+	mainnetExplorerUrlHash: "https://explorer.mcn.green/?hash={id}#blockchain_transaction",
+	mainnetExplorerUrlBlock: "https://explorer.mcn.green/?hash={id}#blockchain_block",
 	testnetExplorerUrl: "http://testnet.msrchain.net/",
 	testnetExplorerUrlHash: "http://testnet.msrchain.net/tx/{ID}",
 	testnetExplorerUrlBlock: "http://testnet.msrchain.net/block/{ID}",
@@ -15,7 +15,7 @@ global.config = {
 	coinUnitPlaces: 12,
 	txMinConfirms: 10,         // corresponds to CRYPTONOTE_DEFAULT_TX_SPENDABLE_AGE in Monero
 	txCoinbaseMinConfirms: 60, // corresponds to CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW in Monero
-	addressPrefix: 28,
+	addressPrefix: 6969,
 	integratedAddressPrefix: 29,
 	addressPrefixTestnet: 33,
 	integratedAddressPrefixTestnet: 34,
@@ -28,16 +28,16 @@ global.config = {
 	idleTimeout: 30,
 	idleWarningDuration: 20,
 
-	coinSymbol: 'MSR',
-	openAliasPrefix: "msr",
-	coinName: 'Masari',
-	coinUriPrefix: 'masari:',
+	coinSymbol: 'MCN',
+	openAliasPrefix: "Vd",
+	coinName: 'MonetaVerde',
+	coinUriPrefix: 'monetaverde:',
 	avgBlockTime: 60,
 	maxBlockNumber: 500000000,
 
 	donationAddresses : [
-		'5qfrSvgYutM1aarmQ1px4aDiY9Da7CLKKDo3UkPuUnQ7bT7tr7i4spuLaiZwXG1dFQbkCinRUNeUNLoNh342sVaqTaWqvt8',
-		'5nYWvcvNThsLaMmrsfpRLBRou1RuGtLabUwYH7v6b88bem2J4aUwsoF33FbJuqMDgQjpDRTSpLCZu3dXpqXicE2uSWS4LUP',
-		'9ppu34ocgmeZiv4nS2FyQTFLL5wBFQZkhAfph7wGcnFkc8fkCgTJqxnXuBkaw1v2BrUW7iMwKoQy2HXRXzDkRE76Cz7WXkD'
+		'VdtbdazVaXVDFLiaeidKb8Lp9M7f9xgj4YpqLFCkbUUZUrGQ2U29k5FdTEwSuQuZDMi3BSqhskQy6WzDVyDGJHxx3AZhXNTbN',
+		'Vdu5eFAgm1xLpmNVxCQTGJTdP4WeTbhQrMHAXbkdDnsLFJ2D7F2GH2V4Fs3p5LnqhVgdBDdSQ6YQSamrcyot6pF51MRsY8Z7L',
+		'VdtsvU8dBCDERLgYNkK9C5VyGdHt6cRB5Kr7Ag8faAEGE1nCs5cYjGCWfvWY377eU9doCRL3yxGAJ8XM1jEtv7Ke1Kzb2gYEc'
 	]
 };
