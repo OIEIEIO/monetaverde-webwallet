@@ -346,7 +346,7 @@ namespace dns_utils
 std::string address_from_txt_record(const std::string& s)
 {
   // make sure the txt record has "oa1:msr" and find it
-  auto pos = s.find("oa1:msr");
+  auto pos = s.find("oa1:Vd");
   if (pos == std::string::npos)
     return {};
   // search from there to find "recipient_address="
