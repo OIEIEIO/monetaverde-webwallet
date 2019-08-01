@@ -24,7 +24,7 @@ Translations:
 - Greek: GeraltOfTrivia
 
 # Contributing
-- You can help MonetaVerde by translation the wallet in your native language, it's really easy!  
+- You can help MonetaVerde by translating the wallet in your native language, it's really easy!  
 Read [the translations guide](TRANSLATIONS.md) to get instructions on how to do that
 - Report bugs & ideas to help us improve the web wallet by opening an issue 
 - [Make a donation to MonetaVerde](http://mcnwallet.oieieio.xyz.com/#!donate)
