@@ -46,11 +46,11 @@ namespace bf = boost::filesystem;
 
 static const char *DEFAULT_DNS_PUBLIC_ADDR[] =
 {
-  "194.150.168.168",    // CCC (Germany)
-  "81.3.27.54",         // Lightning Wire Labs (Germany)
-  "31.3.135.232",       // OpenNIC (Switzerland)
-  "80.67.169.40",       // FDN (France)
-  "209.58.179.186",     // Cyberghost (Singapore)
+  "51.75.145.218:26080", // germany
+  "145.239.5.182:26080", // london
+  "144.217.242.127:26080", // canada
+  "144.217.84.27:26080", // canada2
+  "173.212.213.63:26080" // oieieio's
 };
 
 static boost::mutex instance_lock;
@@ -358,10 +358,10 @@ std::string address_from_txt_record(const std::string& s)
   auto pos2 = s.find(";", pos);
   if (pos2 != std::string::npos)
   {
-    // length of address == 95, we can at least validate that much here
-    if (pos2 - pos == 95)
+    // length of address == 97, we can at least validate that much here
+    if (pos2 - pos == 97)
     {
-      return s.substr(pos, 95);
+      return s.substr(pos, 97);
     }
     else if (pos2 - pos == 106) // length of address == 106 --> integrated address
     {
@@ -506,7 +506,7 @@ bool load_txt_records_from_dns(std::vector<std::string> &good_records, const std
 
   if (num_valid_records < 2)
   {
-    LOG_PRINT_L2("WARNING: no two valid MasariPulse DNS checkpoint records were received");
+    LOG_PRINT_L2("WARNING: no two valid MonetaVerdePulse DNS checkpoint records were received");
     return false;
   }
 
@@ -528,7 +528,7 @@ bool load_txt_records_from_dns(std::vector<std::string> &good_records, const std
 
   if (good_records_index < 0)
   {
-    LOG_PRINT_L2("WARNING: no two MasariPulse DNS checkpoint records matched");
+    LOG_PRINT_L2("WARNING: no two MonetaVerdePulse DNS checkpoint records matched");
     return false;
   }
 
