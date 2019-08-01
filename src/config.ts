@@ -23,7 +23,7 @@ global.config = {
 	subAddressPrefixTestnet: 73,
 	feePerKB: new JSBigInt('400000000'),//20^10 - for testnet its not used, as fee is dynamic.
 	dustThreshold: new JSBigInt('1000000000'),//10^10 used for choosing outputs/change - we decompose all the way down if the receiver wants now regardless of threshold
-	defaultMixin: 12, // default value mixin
+	defaultMixin: 4, // default value mixin
 
 	idleTimeout: 30,
 	idleWarningDuration: 20,
@@ -31,7 +31,7 @@ global.config = {
 	coinSymbol: 'MCN',
 	openAliasPrefix: "Vd",
 	coinName: 'MonetaVerde',
-	coinUriPrefix: 'monetaverde:',
+	coinUriPrefix: 'moneta:',
 	avgBlockTime: 60,
 	maxBlockNumber: 500000000,
 
